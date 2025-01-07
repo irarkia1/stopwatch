@@ -4,6 +4,7 @@
 #include <thread>
 #include <string>
 #include <conio.h>
+#include <filesystem>
 
 //path libs craidas
 #include "libs/StopwatchTimeTyped.h"
@@ -17,6 +18,8 @@
 //funtion main
 int main(){
 
+//criat mkdir
+std::filesystem::create_directory("register");
 
 //variable standard
     double time_typed;

@@ -21,7 +21,7 @@ class SaiveFiler{
         
         //method
             void setPathRegister(){
-                PathRegister = "C:\\Users\\irark\\Documents\\Estudo\\c++\\dia 08\\registros\\Data_";
+                PathRegister = "register\\Data_";
             }
 
     public:
