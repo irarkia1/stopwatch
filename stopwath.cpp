@@ -29,9 +29,9 @@ std::filesystem::create_directory("register");
 
 //variable standard
     InteractionUser interactionUser;
+    interactionUser.timeTypedKeyboard();
     double time_typed = interactionUser.time_typed_user;
 //message to client
-     interactionUser.timeTypedKeyboard();
 
 //class
     Time_typed_client time_typed_client (time_typed);
