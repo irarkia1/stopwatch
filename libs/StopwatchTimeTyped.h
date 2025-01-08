@@ -1,3 +1,6 @@
+#ifndef StopwatchTimeTyped_H
+#define StopwatchTimeTyped_H
+
 #include <iostream>
 
 class Time_typed_client{
@@ -20,3 +23,4 @@ class Time_typed_client{
     private:
 };
 
+#endif //StopwatchTimeTyped_H

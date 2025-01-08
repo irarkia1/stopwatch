@@ -5,14 +5,20 @@
 #include <string>
 #include <conio.h>
 #include <filesystem>
+#include <windows.h>
 
 //path libs craidas
 #include "libs/StopwatchTimeTyped.h"
 #include "libs/StopwatchCalculation.h"
 #include "libs/filerCreate.h"
 #include "libs/countStopwatch.h"
+#include "libs/interactionUser.h"
 
 //struct
+
+//API WINDOWS
+
+// Função para alterar o ícone da janela
 
 
 //funtion main
@@ -22,11 +28,10 @@ int main(){
 std::filesystem::create_directory("register");
 
 //variable standard
-    double time_typed;
-
+    InteractionUser interactionUser;
+    double time_typed = interactionUser.time_typed_user;
 //message to client
-    std::cout << "Digete o quantas horas deseja estudar: " << std::endl;
-    std::cin >> time_typed;
+     interactionUser.timeTypedKeyboard();
 
 //class
     Time_typed_client time_typed_client (time_typed);
