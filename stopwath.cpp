@@ -13,6 +13,7 @@
 #include "libs/filerCreate.h"
 #include "libs/countStopwatch.h"
 #include "libs/interactionUser.h"
+#include "libs/report.h"
 
 //struct
 
@@ -23,14 +24,27 @@
 
 //funtion main
 int main(){
+//var
 
 //criat mkdir
 std::filesystem::create_directory("register");
+//{-----------------
+InteractionUser interactionUser;
+// var
+ bool valid_input = false;
+//quest cliente to report
+    while (!valid_input) {
+    
+        if(interactionUser.questUser() == 1){
+        ReportSearch reportSearch;
+        
+        };
+        valid_input = true;
+    }
 
-//variable standard
-    InteractionUser interactionUser;
     interactionUser.timeTypedKeyboard();
     double time_typed = interactionUser.time_typed_user;
+//}-----------------    
 //message to client
 
 //class
