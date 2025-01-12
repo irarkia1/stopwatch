@@ -67,7 +67,7 @@ class SaiveFiler{
                 filer.open(dayRegister, std::ios::out | std::ios::app);
 
                 if(filer.is_open()) {
-                    filer << "O usuario parou a contagem no dia: " + captureDate +" As: "+ logStopwatch + "\n\n";
+                    filer << "O usuario parou a contagem no dia: " + captureDate +" As "+ logStopwatch + "\n\n";
                         if(finishCounth){
                              std::cerr << "log Registrado." << std::endl;
                             filer.close();
