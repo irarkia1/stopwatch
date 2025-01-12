@@ -15,12 +15,12 @@ class InteractionUser{
         bool valid_input = false;
         bool valid_imput_questUser = false;
     public:
-    //object
-        int questCliente;
-
-
     //var 
+        int questCliente;
         double time_typed_user;
+        std::string WhatReportBegin;
+        std::string WhatReportEnd;
+
         
     //Method 
         int questUser(){
@@ -46,13 +46,21 @@ class InteractionUser{
                 
             }
             return questCliente;
-                
+                std::cout << "" << std::endl;
         };
-           
+        
+        void questUserWhatReport(){
+            std::cout << "==========================================================" << std::endl;
+            std::cout << "\nVamos escolher a data de qual ou quais relatorios deseja ver! \n" << std::endl;
+            std::cout << "Escolha a data INICIAL: (ex: 10-01-2024)" << std::endl;
+            std::cin >> WhatReportBegin;
+            std::cout << "Escolha a data FINAL: (ex: 15-01-2024)" << std::endl;
+            std::cin >> WhatReportEnd;
+        }
              
         void timeTypedKeyboard (){
             do{
-                std::cout << "Digite o tempo que deseja estudar (EX: 1.10): " << std::endl;
+                std::cout << "\nDigite o tempo que deseja estudar (EX: 1.10): " << std::endl;
                 std::cin >> time_typed_user;
 
             //validation

@@ -21,7 +21,7 @@ class SaiveFiler{
         
         //method
             void setPathRegister(){
-                PathRegister = "register\\Data_";
+                PathRegister = "register\\";
             }
 
     public:

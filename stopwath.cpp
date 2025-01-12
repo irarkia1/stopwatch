@@ -30,17 +30,16 @@ int main(){
 std::filesystem::create_directory("register");
 //{-----------------
 InteractionUser interactionUser;
+
+
 // var
- bool valid_input = false;
-//quest cliente to report
-    while (!valid_input) {
-    
-        if(interactionUser.questUser() == 1){
-        ReportSearch reportSearch;
-        
-        };
-        valid_input = true;
-    }
+
+//quest cliente to report  
+
+    interactionUser.questUser();
+    ReportSearch reportSearch;
+    interactionUser.questUserWhatReport();
+    reportSearch.viewReportDetailed(interactionUser);
 
     interactionUser.timeTypedKeyboard();
     double time_typed = interactionUser.time_typed_user;
