@@ -8,6 +8,10 @@
 #include <vector>
 #include <exception>
 #include <fstream>
+#include <sstream>
+#include <iomanip>
+#include <chrono>
+
 
 //libs criet
 
@@ -23,7 +27,10 @@ class ReportSearch {
             //var
             std::string pathDirectory = "register";
             std::vector <std::string> filter_txt;
-            double resultAllChoice, resultAllBegin, resultAllEnd;
+            std::vector<double> timeTypedRepoth;
+            std::vector<std::chrono::duration<long long int>> calcuDateBeginEnd;
+            std::vector <std::chrono::system_clock::time_point> begin;
+            std::vector <std::chrono::system_clock::time_point> end;
         public:
             //method
             ReportSearch(){
@@ -77,19 +84,19 @@ class ReportSearch {
                         openRepoth.open(currentFileName, std::ios::in);
 
                         if(openRepoth.is_open()){
-                            std::cout << "\n=========: REGISTRO SALVOS :=========:" << std::endl;
-                            std::cout << "\nLendo arquivo..........................:\n " << currentFileName << std::endl;
+                            std::cout << "\n=========: Relatorio Detalhado: :=========:" << std::endl;
+                            std::cout << "\n========Arquivo: " << currentFileName<< "========\n\n" << std::endl;
                             std::string line;
 
                             while(std::getline(openRepoth, line)){
                                 allLines.push_back(line);
                                 std::cout << line << std::endl;
                             }
-                        
+                            std::cout << "\n\n     >>>>>>>>>> Total de tempo estudado <<<<<<<<<\n" << std::endl;
                             openRepoth.close();
 
                         }else{
-                             std::cout << "Não foi possível abrir o arquivo: " << currentFileName << std::endl;
+                             std::cout << "Nao foi possivel abrir o arquivo: " << currentFileName << std::endl;
                         }
                         dateBegin.tm_mday++;
                         std::mktime(&dateBegin);
@@ -101,12 +108,14 @@ class ReportSearch {
                  std::string option01 = "Quantidade de Horas escol", option02 = "Inicio da contagem no dia", option03 = "O usuario parou a contage";
                     for (const auto& line02 : lines){
                         std::string capturado = line02.substr(0,25);
+
                         //Debug
                         //std::cout << capturado << std::endl;
                         
                         if(capturado == option01){
                             std::string capture01 = line02.substr(31);
                             double resultAllChoice = std::stod(capture01);
+                            timeTypedRepoth.push_back (resultAllChoice);
                             //Debug
                             //std::cout << resultAllChoice << std::endl;
 
@@ -122,8 +131,9 @@ class ReportSearch {
                                 std::cout << "Erro ao converter a data" << capture02 << std::endl;
                             }else{
                                 auto resultAllBegin = std::chrono::system_clock::from_time_t(std::mktime(&tm));
-                                //Debug
-                                //std::cout << "Data convertida com sucesso! Inicio" << std::endl;
+                                begin.push_back (resultAllBegin);
+                                std::cout << "Data convertida para 'begin': " << capture02 << std::endl;
+                                std::cout << "Valor adicionado a begin: " << resultAllBegin.time_since_epoch().count() << std::endl;
                             };
 
                         }else if (capturado == option03) {
@@ -135,13 +145,31 @@ class ReportSearch {
 
                             if(iss.fail()){
                                 std::cout << "Erro ao converter a data" << capture03 << std::endl;
+                                
                             }else{
                                 auto resultAllEnd = std::chrono::system_clock::from_time_t(std::mktime(&tm));
+                                end.push_back(resultAllEnd);
                                 //Debug
-                                //std::cout << "Data convertida com sucesso! Final" << std::endl;
-                            }
+                                std::cout << "Data convertida para 'End': " << capture03 << std::endl;
+                                std::cout << "Valor adicionado a End: " << resultAllEnd.time_since_epoch().count() << std::endl;
+                            };
+
+                            if(!begin.empty() && !end.empty()){
+                                std::cout << "Begin size: " << begin.size() << ", End size: " << end.size() << std::endl;
+                                // Calculando a diferença entre os primeiros elementos de 'begin' e 'end'
+                                auto duration = std::chrono::duration_cast<std::chrono::seconds>(end[0] - begin[0]);
+                                calcuDateBeginEnd.push_back(duration);
+
+                                // Imprimindo a duração
+                                std::cout << "\n segundos:" << duration.count() <<  std::endl;
+                                begin.clear();
+                                end.clear();
+                                }else {
+                                    std::cout << "Erro: Vetores 'begin' ou 'end' estão vazios." << std::endl;
+                                }
+                            
                         }else{
-                            std::cout << "Err:210" << std::endl;
+                            std::cout << "      ------------Fim do Primeiro registro.----------\n\n" << std::endl;
                         }
                         //std::cout << capturado << std::endl;
                             
@@ -150,7 +178,6 @@ class ReportSearch {
 
 
 };
-
 
 
 #endif // REPORT.H
