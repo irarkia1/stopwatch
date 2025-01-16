@@ -4,6 +4,10 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+
+//path libs craidas
+#include "report.h"
+
 class Calculation_stopwatch {
     public:
         //var
@@ -20,22 +24,12 @@ class Calculation_stopwatch {
                 std::cout << "Minutos total: " << minutes_all << std::endl;
                 std::cout << "segundos total: " << seconds_all << std::endl;
             }
+
+            static int Calculation_Report_All(std::chrono::duration<long long int> &calcule){
+                return static_cast<int>(calcule.count());
+                
+            }
     private:
 };
 
-// class Count_Stopwatch{
-//     public:
-//         //var
-        
-//         //method
-//             void countStopwatch(const Calculation_stopwatch& CalculateTime){
-//                 if (true == true){
-//                     for(int i = CalculateTime.seconds_all; i >= 0; i--){
-//                         std::this_thread::sleep_for(std::chrono::seconds(1));
-//                         std::cout << "Tempo restante: " << i << std::endl;
-//                     }
-//                 }
-//             }
-//     private:
-// };
 #endif // STOPWATCHCALCULATION_H

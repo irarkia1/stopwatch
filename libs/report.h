@@ -14,7 +14,8 @@
 
 
 //libs criet
-
+#include "countStopwatch.h"
+#include "StopwatchCalculation.h"
 
 //namespace
 namespace filter = std::filesystem;
@@ -160,8 +161,16 @@ class ReportSearch {
                                 auto duration = std::chrono::duration_cast<std::chrono::seconds>(end[0] - begin[0]);
                                 calcuDateBeginEnd.push_back(duration);
 
+                                //calculando a duracao 
+                                int SecondsReport = Calculation_stopwatch::Calculation_Report_All(duration);
+
+                                // Formatando e imprimindo o tempo
+                                Count_Stopwatch::get_FormatTime_Report(SecondsReport);
+
                                 // Imprimindo a duração
                                 std::cout << "\n segundos:" << duration.count() <<  std::endl;
+
+                                // Limpando os vetores
                                 begin.clear();
                                 end.clear();
                                 }else {
@@ -172,7 +181,7 @@ class ReportSearch {
                             std::cout << "      ------------Fim do Primeiro registro.----------\n\n" << std::endl;
                         }
                         //std::cout << capturado << std::endl;
-                            
+                           
                     }       
             }
 

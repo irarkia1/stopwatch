@@ -15,6 +15,7 @@
 
 class Count_Stopwatch{
     private:
+
         std::string capitureDate;
         bool finished  = false;
 
@@ -32,6 +33,12 @@ class Count_Stopwatch{
             };
 
     public:
+            static void get_FormatTime_Report(int totalSeconds){
+                Count_Stopwatch Count_Stopwatch;
+                std::string =  Count_Stopwatch.formatTime(totalSeconds);
+                std::cout << "Tempo formatado: " << formattedTime << std::endl;
+            }
+
         void countStopwatch(const Calculation_stopwatch& calculation){
             double CalculateTime = calculation.seconds_all;
             
@@ -57,6 +64,8 @@ class Count_Stopwatch{
                 CalculateTime--;
             }
      };
+    
+
 
         std::string logRegister (){
             capitureDate = DateHours::get_horas();

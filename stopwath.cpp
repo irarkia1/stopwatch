@@ -36,10 +36,15 @@ InteractionUser interactionUser;
 
 //quest cliente to report  
 
-    interactionUser.questUser();
-    ReportSearch reportSearch;
-    interactionUser.questUserWhatReport();
-    reportSearch.viewReportDetailed(interactionUser);
+    
+    while(interactionUser.questUser() == 1){
+        ReportSearch reportSearch;
+        interactionUser.questUserWhatReport();
+        reportSearch.viewReportDetailed(interactionUser);
+        std::cin.get();
+        std::cin.get();
+        system("cls");
+    }
 
     interactionUser.timeTypedKeyboard();
     double time_typed = interactionUser.time_typed_user;

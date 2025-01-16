@@ -38,15 +38,17 @@ class InteractionUser{
                     continue;
                }
                if(questCliente == 1 || questCliente == 2){
-                    std::cout << "\n\n:Registros salvos:" << std::endl;
+                    //std::cout << "\n\n:Registros salvos:" << std::endl;
                     valid_imput_questUser = true;
                }else{
                     std::cout << "\n\n\nDigite uma opcao valida: 1 ou 2\n\n" << std::endl;
                }
                 
             }
+
+            valid_imput_questUser = false;
             return questCliente;
-                std::cout << "" << std::endl;
+            //std::cout << "" << std::endl;
         };
         
         void questUserWhatReport(){
@@ -60,7 +62,7 @@ class InteractionUser{
              
         void timeTypedKeyboard (){
             do{
-                std::cout << "\nDigite o tempo que deseja estudar (EX: 1.10): " << std::endl;
+                std::cout << "\n\nDigite o tempo que deseja estudar (EX: 01.10): " << std::endl;
                 std::cin >> time_typed_user;
 
             //validation
