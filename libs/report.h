@@ -85,14 +85,16 @@ class ReportSearch {
                         openRepoth.open(currentFileName, std::ios::in);
 
                         if(openRepoth.is_open()){
+                            system("cls");
                             std::cout << "\n=========: Relatorio Detalhado: :=========:" << std::endl;
                             std::cout << "\n========Arquivo: " << currentFileName<< "========\n\n" << std::endl;
                             std::string line;
-
+                            
                             while(std::getline(openRepoth, line)){
                                 allLines.push_back(line);
                                 std::cout << line << std::endl;
-                            }
+                            };
+                            
                             std::cout << "\n\n     >>>>>>>>>> Total de tempo estudado <<<<<<<<<\n" << std::endl;
                             openRepoth.close();
 
@@ -133,8 +135,10 @@ class ReportSearch {
                             }else{
                                 auto resultAllBegin = std::chrono::system_clock::from_time_t(std::mktime(&tm));
                                 begin.push_back (resultAllBegin);
-                                std::cout << "Data convertida para 'begin': " << capture02 << std::endl;
-                                std::cout << "Valor adicionado a begin: " << resultAllBegin.time_since_epoch().count() << std::endl;
+                                 //Debug
+                                std::cout << "DIA: " << capture02 <<" Ate ";
+                                //std::cout << "Data convertida para 'begin': " << capture02 << std::endl;
+                                //std::cout << "Valor adicionado a begin: " << resultAllBegin.time_since_epoch().count() << std::endl;
                             };
 
                         }else if (capturado == option03) {
@@ -151,12 +155,14 @@ class ReportSearch {
                                 auto resultAllEnd = std::chrono::system_clock::from_time_t(std::mktime(&tm));
                                 end.push_back(resultAllEnd);
                                 //Debug
-                                std::cout << "Data convertida para 'End': " << capture03 << std::endl;
-                                std::cout << "Valor adicionado a End: " << resultAllEnd.time_since_epoch().count() << std::endl;
+                                std::cout << capture03 << std::endl;
+                                //std::cout << "Data convertida para 'E: " << capture03 << std::endl;
+                                //std::cout << "Valor adicionado a End: " << resultAllEnd.time_since_epoch().count() << std::endl;
                             };
 
                             if(!begin.empty() && !end.empty()){
-                                std::cout << "Begin size: " << begin.size() << ", End size: " << end.size() << std::endl;
+                                //Debug
+                                //std::cout << "Begin size: " << begin.size() << ", End size: " << end.size() << std::endl;
                                 // Calculando a diferença entre os primeiros elementos de 'begin' e 'end'
                                 auto duration = std::chrono::duration_cast<std::chrono::seconds>(end[0] - begin[0]);
                                 calcuDateBeginEnd.push_back(duration);
@@ -165,10 +171,12 @@ class ReportSearch {
                                 int SecondsReport = Calculation_stopwatch::Calculation_Report_All(duration);
 
                                 // Formatando e imprimindo o tempo
+                                
                                 Count_Stopwatch::get_FormatTime_Report(SecondsReport);
 
                                 // Imprimindo a duração
-                                std::cout << "\n segundos:" << duration.count() <<  std::endl;
+                                 //Debug
+                                //std::cout << "\n segundos:" << duration.count() <<  std::endl;
 
                                 // Limpando os vetores
                                 begin.clear();
@@ -178,7 +186,7 @@ class ReportSearch {
                                 }
                             
                         }else{
-                            std::cout << "      ------------Fim do Primeiro registro.----------\n\n" << std::endl;
+                            std::cout << "      ------------Fim do registro.----------\n\n" << std::endl;
                         }
                         //std::cout << capturado << std::endl;
                            

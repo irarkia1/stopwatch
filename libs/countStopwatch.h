@@ -11,7 +11,7 @@
 
 //libs create
 #include "datehours.h"
-#include "StopwatchCalculation.h"
+
 
 class Count_Stopwatch{
     private:
@@ -35,9 +35,9 @@ class Count_Stopwatch{
     public:
             static void get_FormatTime_Report(int totalSeconds){
                 Count_Stopwatch Count_Stopwatch;
-                std::string =  Count_Stopwatch.formatTime(totalSeconds);
-                std::cout << "Tempo formatado: " << formattedTime << std::endl;
-            }
+                std::string formattedTime = Count_Stopwatch.formatTime(totalSeconds);
+                std::cout << "Tempo total estudado: " << formattedTime <<std::endl << std::endl;
+            };
 
         void countStopwatch(const Calculation_stopwatch& calculation){
             double CalculateTime = calculation.seconds_all;

@@ -6,7 +6,6 @@
 #include <thread>
 
 //path libs craidas
-#include "report.h"
 
 class Calculation_stopwatch {
     public:

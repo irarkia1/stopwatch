@@ -44,7 +44,7 @@ InteractionUser interactionUser;
         std::cin.get();
         std::cin.get();
         system("cls");
-    }
+    };
 
     interactionUser.timeTypedKeyboard();
     double time_typed = interactionUser.time_typed_user;
