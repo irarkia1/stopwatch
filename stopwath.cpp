@@ -41,6 +41,7 @@ InteractionUser interactionUser;
         ReportSearch reportSearch;
         interactionUser.questUserWhatReport();
         reportSearch.viewReportDetailed(interactionUser);
+        //reportSearch.TotalTimeEstudReport();
         std::cin.get();
         std::cin.get();
         system("cls");

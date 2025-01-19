@@ -19,6 +19,19 @@ class Calculation_stopwatch {
                 seconds_all = minutes_all  * 60; 
             }
 
+            static int converterToSecond(double time) {
+                // Separar a parte inteira e decimal do tempo (tempo em horas)
+                int hours = static_cast<int>(time);              
+                double fractionalPart = time - hours;           
+
+                // Converter para minutos e depois para segundos
+                int minutes = static_cast<int>(fractionalPart * 100); 
+                int seconds = (hours * 3600) + (minutes * 60);       
+
+                return seconds;
+            }
+
+
             void debug(){
                 std::cout << "Minutos total: " << minutes_all << std::endl;
                 std::cout << "segundos total: " << seconds_all << std::endl;
@@ -28,6 +41,15 @@ class Calculation_stopwatch {
                 return static_cast<int>(calcule.count());
                 
             }
+
+        //   static bool Calculation_TimeTyped_Or_Interupt(
+        //     double timetyped,
+        //     const std::chrono::system_clock::time_point &interupt
+        //     ) {
+        //     return interupt <= std::chrono::system_clock::time_point(std::chrono::seconds(timetyped));
+        //     }
+
+
     private:
 };
 

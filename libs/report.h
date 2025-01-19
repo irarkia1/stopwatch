@@ -11,6 +11,7 @@
 #include <sstream>
 #include <iomanip>
 #include <chrono>
+#include <list>
 
 
 //libs criet
@@ -32,7 +33,10 @@ class ReportSearch {
             std::vector<std::chrono::duration<long long int>> calcuDateBeginEnd;
             std::vector <std::chrono::system_clock::time_point> begin;
             std::vector <std::chrono::system_clock::time_point> end;
+            std::list <int> TotalTimeEstud;
+            
         public:
+        double resultAllChoice;
             //method
             ReportSearch(){
                 try{
@@ -85,17 +89,16 @@ class ReportSearch {
                         openRepoth.open(currentFileName, std::ios::in);
 
                         if(openRepoth.is_open()){
-                            system("cls");
-                            std::cout << "\n=========: Relatorio Detalhado: :=========:" << std::endl;
-                            std::cout << "\n========Arquivo: " << currentFileName<< "========\n\n" << std::endl;
+                            std::cout << "\n______________________: Relatorio Detalhado:_______________________________" << std::endl;
+                            std::cout << "\n*Arquivo: " << currentFileName<< "\n\n" << std::endl;
                             std::string line;
                             
                             while(std::getline(openRepoth, line)){
                                 allLines.push_back(line);
                                 std::cout << line << std::endl;
                             };
-                            
-                            std::cout << "\n\n     >>>>>>>>>> Total de tempo estudado <<<<<<<<<\n" << std::endl;
+                            //calculationReporth(allLines);
+                            std::cout << "\n\n     ___________>>>>>>>>>> ========== FIM ============= <<<<<<<<<______________\n" << std::endl;
                             openRepoth.close();
 
                         }else{
@@ -108,7 +111,8 @@ class ReportSearch {
             }
 
             void calculationReporth(const std::vector<std::string>& lines){
-                 std::string option01 = "Quantidade de Horas escol", option02 = "Inicio da contagem no dia", option03 = "O usuario parou a contage";
+                std::cout << "\n\n            **Total de tempo estudado**\n" << std::endl;
+                std::string option01 = "Quantidade de Horas escol", option02 = "Inicio da contagem no dia", option03 = "O usuario parou a contage";
                     for (const auto& line02 : lines){
                         std::string capturado = line02.substr(0,25);
 
@@ -117,7 +121,7 @@ class ReportSearch {
                         
                         if(capturado == option01){
                             std::string capture01 = line02.substr(31);
-                            double resultAllChoice = std::stod(capture01);
+                            resultAllChoice = std::stod(capture01);
                             timeTypedRepoth.push_back (resultAllChoice);
                             //Debug
                             //std::cout << resultAllChoice << std::endl;
@@ -169,28 +173,45 @@ class ReportSearch {
 
                                 //calculando a duracao 
                                 int SecondsReport = Calculation_stopwatch::Calculation_Report_All(duration);
-
-                                // Formatando e imprimindo o tempo
                                 
-                                Count_Stopwatch::get_FormatTime_Report(SecondsReport);
+                                //calculando qual e maior timeTyped ou SecondsReport
+                                
 
+                                //imprimir tempo
+                                if(SecondsReport <= Calculation_stopwatch::converterToSecond(resultAllChoice)){
+                                    Count_Stopwatch::get_FormatTime_Report(SecondsReport);
+                                    TotalTimeEstud.push_front(SecondsReport);
+                                }else{
+                                    Count_Stopwatch::get_FormatTime_Report(Calculation_stopwatch::converterToSecond(resultAllChoice));
+                                    TotalTimeEstud.push_front(Calculation_stopwatch::converterToSecond(resultAllChoice));
+                                }
+                                
                                 // Imprimindo a duração
                                  //Debug
                                 //std::cout << "\n segundos:" << duration.count() <<  std::endl;
+                                //std::cout << resultAllChoice << "Aqui: resultAllChoice";
+                                //std::cout << SecondsReport << "Aqui: SecondsReport";
 
                                 // Limpando os vetores
                                 begin.clear();
                                 end.clear();
                                 }else {
-                                    std::cout << "Erro: Vetores 'begin' ou 'end' estão vazios." << std::endl;
+                                    std::cout << "Erro: Vetores 'begin' ou 'end' estao vazios." << std::endl;
                                 }
                             
-                        }else{
+                        }else{             
                             std::cout << "      ------------Fim do registro.----------\n\n" << std::endl;
                         }
                         //std::cout << capturado << std::endl;
                            
-                    }       
+                    }
+
+                 std::cout << "Valores na lista: ";
+                 int soma = 0;
+                    for (int valor : TotalTimeEstud) {
+                        soma += valor;
+                    }
+                Count_Stopwatch::get_FormatTime_Report(soma);
             }
 
 
