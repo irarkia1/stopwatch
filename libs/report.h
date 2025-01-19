@@ -206,7 +206,7 @@ class ReportSearch {
                            
                     }
 
-                 std::cout << "Valores na lista: ";
+                 std::cout << "\nSoma Total:\n";
                  int soma = 0;
                     for (int valor : TotalTimeEstud) {
                         soma += valor;
