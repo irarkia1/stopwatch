@@ -1,0 +1,8 @@
+Quantidade de Horas escolhida: 1.100000
+Inicio da contagem no dia: 18-01-2025 As 20 56 52
+O usuario parou a contagem no dia: 18-01-2025 As 20 56 55
+
+Quantidade de Horas escolhida: 2.410000
+Inicio da contagem no dia: 18-01-2025 As 20 57 05
+O usuario parou a contagem no dia: 18-01-2025 As 20 58 37
+

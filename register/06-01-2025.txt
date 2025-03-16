@@ -1,0 +1,86 @@
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 19 38 53
+O usuario parou a contagem no dia: 2025-01-07 As: 19 38 54
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 19 39 31
+O usuario parou a contagem no dia: 2025-01-07 As: 19 39 32
+
+Quantidade de Horas escolhida: 565656.000000
+Inicio da contagem no dia: 2025-01-07 As 19 39 38
+Quantidade de Horas escolhida: 6116.000000
+Inicio da contagem no dia: 2025-01-07 As 19 39 45
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 19 39 56
+O usuario parou a contagem no dia: 2025-01-07 As: 19 39 57
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 20 56 02
+O usuario parou a contagem no dia: 2025-01-07 As: 20 56 03
+
+Quantidade de Horas escolhida: 2.000000
+Inicio da contagem no dia: 2025-01-07 As 20 57 05
+O usuario parou a contagem no dia: 2025-01-07 As: 20 57 41
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 21 39 19
+O usuario parou a contagem no dia: 2025-01-07 As: 21 39 20
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 21 39 38
+O usuario parou a contagem no dia: 2025-01-07 As: 21 39 39
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 21 39 48
+O usuario parou a contagem no dia: 2025-01-07 As: 21 39 49
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 21 40 38
+O usuario parou a contagem no dia: 2025-01-07 As: 21 40 39
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 21 47 22
+O usuario parou a contagem no dia: 2025-01-07 As: 21 47 23
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 03 14
+O usuario parou a contagem no dia: 2025-01-07 As: 22 03 15
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 04 40
+O usuario parou a contagem no dia: 2025-01-07 As: 22 04 41
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 04 55
+O usuario parou a contagem no dia: 2025-01-07 As: 22 04 56
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 36 39
+O usuario parou a contagem no dia: 2025-01-07 As: 22 36 40
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 38 28
+O usuario parou a contagem no dia: 2025-01-07 As: 22 38 29
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 39 04
+O usuario parou a contagem no dia: 2025-01-07 As: 22 39 05
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 2025-01-07 As 22 40 50
+O usuario parou a contagem no dia: 2025-01-07 As: 22 40 51
+
+Quantidade de Horas escolhida: 4.000000
+Inicio da contagem no dia: 2025-01-07 As 22 44 21
+O usuario parou a contagem no dia: 2025-01-07 As: 22 44 28
+
+Quantidade de Horas escolhida: 1.200000
+Inicio da contagem no dia: 2025-01-07 As 22 44 46
+O usuario parou a contagem no dia: 2025-01-07 As: 22 45 03
+
+Quantidade de Horas escolhida: 12.000000
+Inicio da contagem no dia: 2025-01-07 As 22 45 15
+O usuario parou a contagem no dia: 2025-01-07 As: 22 45 28
+
+Quantidade de Horas escolhida: 12.000000
+Inicio da contagem no dia: 2025-01-07 As 22 45 36

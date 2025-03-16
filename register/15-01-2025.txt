@@ -1,0 +1,24 @@
+Quantidade de Horas escolhida: 1.000000
+Inicio da contagem no dia: 15-01-2025 As 20 47 15
+O usuario parou a contagem no dia: 15-01-2025 As 20 47 26
+
+Quantidade de Horas escolhida: 4.000000
+Inicio da contagem no dia: 15-01-2025 As 21 10 37
+Quantidade de Horas escolhida: 1.000000
+Inicio da contagem no dia: 15-01-2025 As 21 24 07
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 15-01-2025 As 21 27 27
+O usuario parou a contagem no dia: 15-01-2025 As 21 27 28
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 15-01-2025 As 21 28 37
+O usuario parou a contagem no dia: 15-01-2025 As 21 28 38
+
+Quantidade de Horas escolhida: 0.010000
+Inicio da contagem no dia: 15-01-2025 As 21 29 21
+O usuario parou a contagem no dia: 15-01-2025 As 21 30 22
+
+Quantidade de Horas escolhida: 0.000000
+Inicio da contagem no dia: 15-01-2025 As 21 30 38
+O usuario parou a contagem no dia: 15-01-2025 As 21 30 39
+
